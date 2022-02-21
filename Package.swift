@@ -39,3 +39,47 @@ package.targets.append(contentsOf: [
     ),
 ])
 
+// MARK: - Stores
+package.products.append(contentsOf: [
+    .library(
+        name: "ResponseCodeStoreLive",
+        targets: ["ResponseCodeStoreLive"]
+    ),
+    .library(
+        name: "CounterStoreLive",
+        targets: ["CounterStoreLive"]
+    ),
+])
+
+package.targets.append(contentsOf: [
+    .target(
+        name: "Store",
+        dependencies: []
+    ),
+
+    .target(
+        name: "ResponseCodeStore",
+        dependencies: ["Store"]
+    ),
+    .target(
+        name: "ResponseCodeStoreLive",
+        dependencies: ["ResponseCodeStore"]
+    ),
+    .testTarget(
+        name: "ResponseCodeStoreTests",
+        dependencies: ["ResponseCodeStoreLive"]
+    ),
+
+    .target(
+        name: "CounterStore",
+        dependencies: ["Store"]
+    ),
+    .target(
+        name: "CounterStoreLive",
+        dependencies: ["CounterStore"]
+    ),
+    .testTarget(
+        name: "CounterStoreTests",
+        dependencies: ["CounterStoreLive"]
+    ),
+])
