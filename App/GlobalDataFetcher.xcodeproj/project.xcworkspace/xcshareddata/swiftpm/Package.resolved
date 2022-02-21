@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "RxAnimated",
+        "repositoryURL": "git@github.com:RxSwiftCommunity/RxAnimated.git",
+        "state": {
+          "branch": null,
+          "revision": "0662b385d5bae8e533c38e979b58a284001286a2",
+          "version": "0.9.0"
+        }
+      },
+      {
+        "package": "RxSwift",
+        "repositoryURL": "git@github.com:ReactiveX/RxSwift.git",
+        "state": {
+          "branch": null,
+          "revision": "b4307ba0b6425c0ba4178e138799946c3da594f8",
+          "version": "6.5.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
